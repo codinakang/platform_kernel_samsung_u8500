@@ -83,7 +83,7 @@ choice
 		bool "SIO" if IOSCHED_SIO=y
 
 	config DEFAULT_SIOPLUS
-		bool "SIOPLUS" if IOSCHED_ SIOPLUS=y
+		bool "SIOPLUS" if IOSCHED_SIOPLUS=y
 
 endchoice
 
