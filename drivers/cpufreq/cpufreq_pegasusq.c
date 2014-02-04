@@ -178,7 +178,7 @@ static unsigned int get_nr_run_avg(void)
 #define UP_THRESHOLD_AT_MIN_FREQ		(40)
 #define FREQ_FOR_RESPONSIVENESS			(400000)
 /* for fast decrease */
-#define FREQ_FOR_FAST_DOWN			(1000000)
+#define FREQ_FOR_FAST_DOWN			(800000)
 #define UP_THRESHOLD_AT_FAST_DOWN		(95)
 
 #define HOTPLUG_DOWN_INDEX			(0)
