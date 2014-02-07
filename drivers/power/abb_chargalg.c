@@ -2604,3 +2604,4 @@ MODULE_LICENSE("GPL v2");
 MODULE_AUTHOR("Johan Palsson, Karl Komierowski");
 MODULE_ALIAS("platform:ab8500-chargalg");
 MODULE_DESCRIPTION("AB8500 battery temperature driver");
+

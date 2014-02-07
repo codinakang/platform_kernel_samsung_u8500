@@ -53,16 +53,6 @@ config IOSCHED_SIO
           basic merging, trying to keep a minimum overhead. It is aimed
           mainly for aleatory access devices (eg: flash devices).
 
-config IOSCHED_SIOPLUS
-	tristate "Simple I/O scheduler plus"
-	default y
-	---help---
-	  The Simple I/O scheduler is an extremely simple scheduler,
-	  based on noop and deadline, that relies on deadlines to
-	  ensure fairness. The algorithm does not do any sorting but
-	  basic merging, trying to keep a minimum overhead. It is aimed
-	  mainly for aleatory access devices (eg: flash devices).
-
 choice
 	prompt "Default I/O scheduler"
 	default DEFAULT_CFQ
@@ -82,9 +72,6 @@ choice
 	config DEFAULT_SIO
 		bool "SIO" if IOSCHED_SIO=y
 
-	config DEFAULT_SIOPLUS
-		bool "SIOPLUS" if IOSCHED_SIOPLUS=y
-
 endchoice
 
 config DEFAULT_IOSCHED
@@ -93,7 +80,6 @@ config DEFAULT_IOSCHED
 	default "cfq" if DEFAULT_CFQ
 	default "noop" if DEFAULT_NOOP
 	default "sio" if DEFAULT_SIO
-	default "sioplus" if DEFAULT_SIOPLUS
 
 endmenu
 
